@@ -1,0 +1,116 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: 38, 38%, 82%;
+  --accent: 35, 37%, 88%;
+  --card: 38, 39%, 85%;
+  --muted: 33, 37%, 61%;
+  --secondary: 60, 25%, 16%;
+
+  --foreground: 60, 25%, 16%;
+  --foreground-muted: 57, 32%, 27%;
+  --foreground-secondary: 38, 38%, 82%;
+
+  --border: 36, 38%, 72%;
+  --lines: 37, 38%, 78%;
+
+  --black: 0, 0%, 0%;
+  --white: 0, 0%, 90%;
+
+  --svg-one: 60, 25%, 16%;
+  --svg-two: 57, 35%, 35%;
+  --svg-three: 40, 33%, 96%;
+  --svg-four: 27, 35%, 48%;
+  --svg-five: 33, 37%, 61%;
+}
+
+.dark {
+  --background: 60, 31%, 5%;
+  --accent: 60, 35%, 10%;
+  --card: 60, 40%, 6%;
+  --muted: 57, 35%, 35%;
+  --secondary: 38, 38%, 82%;
+
+  --foreground: 38, 38%, 82%;
+  --foreground-muted: 42, 10%, 43%;
+  --foreground-secondary: 60, 31%, 5%;
+
+  --border: 58, 28%, 23%;
+  --lines: 60, 32%, 6%;
+
+  --svg-one: 38, 38%, 82%;
+  --svg-two: 27, 35%, 48%;
+  --svg-three: 17, 32%, 15%;
+  --svg-four: 56, 33%, 44%;
+  --svg-five: 58, 28%, 23%;
+}
+
+@theme inline {
+  --font-sans: var(--font-poppins-sans);
+
+  --color-*: initial;
+  --color-background: hsl(var(--background));
+  --color-accent: hsl(var(--accent));
+  --color-card: hsl(var(--card));
+  --color-muted: hsl(var(--muted));
+  --color-secondary: hsl(var(--secondary));
+
+  --color-foreground: hsl(var(--foreground));
+  --color-foreground-muted: hsl(var(--foreground-muted));
+  --color-foreground-secondary: hsl(var(--foreground-secondary));
+
+  --color-border: hsl(var(--border));
+  --color-lines: hsl(var(--lines));
+
+  --color-black: hsl(var(--black));
+  --color-white: hsl(var(--white));
+
+  --color-svg-one: hsl(var(--svg-one));
+  --color-svg-two: hsl(var(--svg-two));
+  --color-svg-three: hsl(var(--svg-three));
+  --color-svg-four: hsl(var(--svg-four));
+  --color-svg-five: hsl(var(--svg-five));
+
+  --animate-shimmer: shimmer 5s infinite linear;
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  --animate-line-move: line-move 1s infinite linear;
+  @keyframes line-move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: var(--offset-x) var(--offset-y);
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border focus-visible:outline-none;
+  }
+  img,
+  video {
+    @apply pointer-events-none;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1 {
+    @apply text-4xl font-bold tracking-tight transition-all duration-500 md:text-5xl;
+  }
+  h2 {
+    @apply text-2xl font-semibold transition-all duration-500 md:text-3xl;
+  }
+  h3 {
+    @apply text-xl font-medium transition-all duration-500 md:text-2xl;
+  }
+}
