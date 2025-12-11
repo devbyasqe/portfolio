@@ -5,7 +5,7 @@ import { Container } from "../ui";
 const Header = () => {
   return (
     <>
-      <Container className="pointer-events-none h-2" />
+      <Container className="pointer-events-none h-4" />
 
       <header className="border-t border-b">
         <Container as={"nav"}>

@@ -1,4 +1,11 @@
-import { MoonIcon, SunIcon, SystemIcon } from "../svg";
+import {
+  FileIcon,
+  MoonIcon,
+  PersonIcon,
+  SunIcon,
+  SystemIcon,
+  ToolsIcon,
+} from "../svg";
 
 export const userProfile = {
   primaryImage: "/profile/picture/profile.webp",
@@ -15,4 +22,10 @@ export const themeModes = [
   { icon: <SystemIcon />, label: "system" },
   { icon: <SunIcon />, label: "light" },
   { icon: <MoonIcon />, label: "dark" },
+];
+
+export const navLinks = [
+  { label: "Projects", href: "/projects", icon: <FileIcon /> },
+  { label: "Tools", href: "/tools", icon: <ToolsIcon /> },
+  { label: "About", href: "/about", icon: <PersonIcon /> },
 ];

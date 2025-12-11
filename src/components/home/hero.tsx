@@ -17,10 +17,10 @@ const HomeHero = () => {
     <section>
       <Container>
         <div className="grid sm:grid-cols-12">
-          <div className="group/image bg-background px-4 py-6 sm:col-span-5 sm:border-r md:col-span-4 transition-all duration-500">
+          <div className="group/image bg-background px-4 py-6 transition-all duration-500 sm:col-span-5 sm:border-r md:col-span-4">
             <div className="ring-muted ring-offset-background via-muted animate-shimmer relative aspect-square overflow-hidden rounded-full bg-linear-to-r from-transparent to-transparent bg-size-[200%_100%] ring-2 ring-offset-2 max-sm:h-44">
               <Image
-                loading="lazy"
+                loading="eager"
                 src={userProfile["primaryImage"]}
                 alt="profile image"
                 height={720}
@@ -33,7 +33,7 @@ const HomeHero = () => {
                 )}
               />
               <Image
-                loading="lazy"
+                loading="eager"
                 src={userProfile["secondaryImage"]}
                 alt="profile image"
                 height={720}
@@ -47,7 +47,7 @@ const HomeHero = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col justify-end sm:col-span-7 md:col-span-8 transition-all duration-500">
+          <div className="flex flex-col justify-end transition-all duration-500 sm:col-span-7 md:col-span-8">
             <div className="bg-background p-4 sm:border-t">
               <h1>ASHIQUE</h1>
               <p className="text-foreground-muted mt-1 text-sm tracking-tight">
@@ -60,7 +60,7 @@ const HomeHero = () => {
 
         <div className="border-t">
           <div className="bg-background mx-auto w-[90%] max-w-2xl border-r border-l">
-            <h3 className="text-pretty p-4">
+            <h3 className="p-4 text-pretty">
               I develop full-stack applications using Django and Next.js. I care
               about clean code, thoughtful interfaces, and building things that
               actually work.
@@ -76,11 +76,7 @@ const HomeHero = () => {
                 <IconWrapper variant={null} hover={"left"}>
                   <GmailIcon />
                 </IconWrapper>
-                <IconWrapper
-                  hover={"right"}
-                  variant={null}
-                  className="text-foreground-secondary"
-                >
+                <IconWrapper hover={"right"} variant={"secondary"}>
                   <GmailIcon />
                 </IconWrapper>
                 <ButtonSlideText>Gmail</ButtonSlideText>

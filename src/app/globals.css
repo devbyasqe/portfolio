@@ -95,7 +95,7 @@
 
 @layer base {
   * {
-    @apply border-border focus-visible:outline-none;
+    @apply border-border focus-visible:outline-none select-none;
   }
   img,
   video {

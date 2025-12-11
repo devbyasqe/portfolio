@@ -5,6 +5,8 @@ import LenisProvider from "@/components/providers/lenis";
 import ThemeProvider from "@/components/providers/theme";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { ScrollToTop } from "@/components/home";
+import Navbar from "@/components/navbar";
 
 const poppinsSans = Poppins({
   variable: "--font-poppins-sans",
@@ -40,6 +42,7 @@ export default function RootLayout({
     <html lang="en" className="overscroll-none" suppressHydrationWarning>
       <body className={`${poppinsSans.variable}`}>
         <LenisProvider />
+        <ScrollToTop />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -50,6 +53,7 @@ export default function RootLayout({
           <Header />
           <main> {children}</main>
           <Footer />
+          <Navbar />
         </ThemeProvider>
       </body>
     </html>

@@ -66,7 +66,7 @@ export type TProject = {
 };
 
 export type TProjectCard = {
-  number: number;
+  id: number;
   thumbnail: Media;
   summary: string;
   name: string;

@@ -1,23 +1,23 @@
 import { TProject } from "@/lib/types";
 
 const massMailerX: TProject = {
-  highlight: true,
+  highlight: false,
   name: "MassMailerX",
   overview: {
     summary:
-      "A high-performance Python-based bulk email sender with HTML styling, dynamic attachments, and robust error handling.",
+      "A flexible Python tool for sending bulk emails with styled HTML, attachments, and reliable delivery.",
     description:
-      "MassMailerX is a feature-rich and customizable bulk email automation tool built with Python. Perfect for newsletters, marketing campaigns, event invitations, job applications, or any large-scale email distribution. It supports HTML-styled emails with inline CSS and provides a plain-text fallback for maximum compatibility. The tool handles dynamic file attachments, flexible recipient list inputs from CSV/TXT, and incorporates advanced error handling with detailed logging. Designed with a modular architecture, it’s easy to maintain, extend, and adapt for various workflows.",
+      "MassMailerX is built for anyone who needs to send large batches of emails without the headache. It supports HTML-styled messages with inline CSS, plus a plain-text fallback for clients that don’t render HTML well. You can load recipients from CSV or text files, attach files automatically from a directory, and rely on detailed logging to track every run. With a modular structure and strong error handling, the tool is easy to extend or plug into existing workflows.",
   },
   features: [
-    "Bulk Email Sending: Deliver emails to multiple recipients in a single run.",
-    "HTML-Styled Content: Create professional-looking emails with inline CSS and plain-text fallback.",
-    "Dynamic Attachments: Automatically attach files (PDF, images, docs, etc.) from a specified directory.",
-    "Flexible Recipient Input: Import recipients from CSV or TXT files with built-in validation.",
-    "Modular Architecture: Easy to customize, extend, and integrate with other tools.",
-    "Detailed Logging: Track successes and failures with timestamps and error details.",
-    "Robust Error Handling: Manage SMTP, file, and recipient errors gracefully.",
-    "Secure & Reliable: Uses Python’s smtplib and email libraries for dependable delivery.",
+    "Bulk email delivery in one straightforward run",
+    "HTML emails with inline CSS and a clean plain-text fallback",
+    "Automatic file attachments from a chosen folder",
+    "Load recipients from CSV or TXT with validation",
+    "Modular structure that’s easy to modify",
+    "Detailed logs for successful sends and errors",
+    "Graceful handling of SMTP and file-related issues",
+    "Built on Python’s email and smtplib libraries for dependable delivery",
   ],
   stacks: ["Python", "HTML", "CSS", "SMTP", "Email MIME"],
   tags: ["Python"],
@@ -28,7 +28,7 @@ const massMailerX: TProject = {
     },
   ],
   preview: {
-    img: "/projects/massmailerx/one.webp",
+    img: "/projects/massmailerx/preview.webp",
   },
   thumbnail: {
     img: "/projects/massmailerx/thumbnail.webp",
@@ -40,17 +40,17 @@ const nexusSeaCarriers: TProject = {
   name: "Nexus Sea Carriers",
   overview: {
     summary:
-      "NEXUS SEA CARRIERS Shipping provides reliable sea and global freight solutions tailored to businesses of all sizes. From international logistics to smooth local delivery, we focus on efficiency, transparency, and customer trust every step of the way.",
+      "A modern shipping services site that presents global freight solutions with clean design, gentle motion, and an easy-to-follow layout.",
     description:
-      "Nexus Sea Carriers (NCS) is a modern web-based shipping platform built with Next.js, Tailwind CSS, and Framer Motion. The project showcases a clean, responsive design with smooth animations to highlight freight services, logistics solutions, and company information. NCS emphasizes clarity and accessibility, making it easy for visitors to explore offerings such as worldwide shipping, tracking, and service details. With a front-end focused stack, the application is lightweight, fast, and deployable on modern hosting platforms like Vercel. It’s designed as a portfolio-ready project to demonstrate expertise in building polished, interactive, and production-quality interfaces.",
+      "Nexus Sea Carriers is a front-end showcase built with Next.js, Tailwind, and Framer Motion. The site highlights key logistics services with a clear structure, responsive design, and smooth transitions that guide visitors effortlessly across sections. The project focuses on clarity and speed, keeping the experience lightweight while still feeling polished. It’s built to be deployed instantly on Vercel and can be expanded with APIs or backend services whenever needed.",
   },
   features: [
-    "Responsive Layout: Optimized for mobile, tablet, and desktop screens.",
-    "Interactive Animations: Powered by Framer Motion for smooth transitions.",
-    "Modern UI: Tailwind CSS ensures clean and consistent styling.",
-    "Service Sections: Organized details about shipping, tracking, and logistics.",
-    "Deployment Ready: Configured for Vercel hosting with zero backend requirements.",
-    "Scalable Structure: Easy to extend with APIs or backend services if needed.",
+    "Fully responsive design for phones, tablets, and desktops",
+    "Smooth Framer Motion transitions across pages and components",
+    "Clean Tailwind-based UI with consistent styling",
+    "Organized sections for services, tracking, logistics, and company details",
+    "Ready for Vercel deployment with no backend setup",
+    "Simple structure that can scale into a full logistics platform",
   ],
   stacks: ["Next.Js", "Tailwind Css", "motion"],
   tags: ["Next.Js"],
@@ -62,13 +62,47 @@ const nexusSeaCarriers: TProject = {
     },
   ],
   preview: {
-    img: "/projects/nexusseacarriers/one.webp",
+    video: "/projects/nexusseacarriers/preview.webm",
   },
   thumbnail: {
-    img: "/projects/nexusseacarriers/thumbnail.webp",
+    video: "/projects/nexusseacarriers/thumbnail.webm",
   },
 };
 
+const weeb: TProject = {
+  highlight: true,
+  name: "Weeb",
+  overview: {
+    summary:
+      "An anime discovery app built for people who want quick access to shows, manga, characters, and creators through a clean, fast, and smooth interface.",
+    description:
+      "Weeb pulls data from the Jikan API and turns it into a polished browsing experience. You can search across anime, manga, characters, people, and studios, then dive into rich detail pages with staff credits, episode info, recommendations, and related titles. The app surfaces trending, top-rated, and currently airing shows, along with curated sections for deeper exploration. Large datasets use infinite scroll for a smoother flow. Zustand manages global state, Axios handles API calls, Lenis keeps scrolling fluid, and Motion brings the UI to life with subtle animations.",
+  },
+  features: [
+    "Powerful search across anime, manga, characters, people, and studios",
+    "Rich detail pages with staff, producers, recommendations, and episode lists",
+    "Curated sections for trending, top-rated, new, and currently airing titles",
+    "Infinite scroll for big lists like characters and search results",
+    "Clean Motion-powered animations throughout the UI",
+    "Dark mode with fully responsive layouts",
+    "State management with Zustand",
+    "Smooth scrolling using Lenis",
+  ],
+  stacks: ["Next.Js", "Tailwind Css", "Motion", "Lenis", "Axios", "Zustand"],
+  tags: ["Next.Js"],
+  repositoryUrl: [
+    {
+      label: "Source Code",
+      link: "https://github.com/devbyasqe/weeb",
+    },
+  ],
+  liveDemo: "https://asqe-weeb.vercel.app/",
+  preview: {
+    video: "/projects/weeb/preview.webm",
+  },
+  thumbnail: {
+    video: "/projects/weeb/thumbnail.webm",
+  },
+};
 
-
-export const myProjects: TProject[] = [nexusSeaCarriers, massMailerX];
+export const myProjects: TProject[] = [weeb, nexusSeaCarriers, massMailerX];
