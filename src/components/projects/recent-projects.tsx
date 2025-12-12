@@ -3,7 +3,7 @@ import { Container } from "../ui";
 import { myProjects } from "../data/projects";
 import { CustomLink, IconWrapper } from "../ui/buttons";
 import { ArrowIcon } from "../svg";
-import ProjectCard from "../cards/project";
+import ProjectCard from "./project-card";
 
 const RecentProjects = () => {
   const highlightingProjects = myProjects.filter(

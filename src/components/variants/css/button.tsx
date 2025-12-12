@@ -16,7 +16,10 @@ export const buttonVariants = cva(
         secondary: "bg-secondary text-foreground-secondary",
       },
       enlargeVariant: {
-        accent: ["before:bg-accent", "text-foreground before:border"],
+        accent: [
+          "before:bg-accent before:border-border before:border",
+          "text-foreground",
+        ],
         muted: ["before:bg-muted", "text-foreground"],
         secondary: ["before:bg-secondary", "text-foreground-secondary"],
       },
@@ -51,7 +54,7 @@ export const buttonVariants = cva(
       padding: "icon-last",
       hover: "scale",
     },
-  }
+  },
 );
 
 export const iconWrapperVariants = cva(
@@ -88,7 +91,7 @@ export const iconWrapperVariants = cva(
     defaultVariants: {
       variant: "secondary",
     },
-  }
+  },
 );
 
 export const iconEffectVariants = cva(
@@ -118,7 +121,7 @@ export const iconEffectVariants = cva(
         ],
       },
     },
-  }
+  },
 );
 
 export const animatedBackgroundVariants = cva(
@@ -139,5 +142,5 @@ export const animatedBackgroundVariants = cva(
     defaultVariants: {
       variant: "accent",
     },
-  }
+  },
 );

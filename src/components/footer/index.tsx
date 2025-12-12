@@ -17,7 +17,7 @@ const Footer = () => {
           <ThemeToggler />
         </Container>
       </footer>
-      <Container className="pointer-events-none h-4" />
+      <Container className="pointer-events-none h-8" />
     </>
   );
 };

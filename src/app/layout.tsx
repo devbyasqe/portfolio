@@ -3,7 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/components/providers/lenis";
 import ThemeProvider from "@/components/providers/theme";
-import Header from "@/components/header";
+import Header from "@/components/navbar/header";
 import Footer from "@/components/footer";
 import { ScrollToTop } from "@/components/home";
 import Navbar from "@/components/navbar";
@@ -49,7 +49,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="bg-background animate-line-move pointer-events-none fixed inset-0 -z-10 bg-[repeating-linear-gradient(315deg,hsl(var(--lines))_0,hsl(var(--lines))_1px,transparent_0,transparent_50%),repeating-linear-gradient(-315deg,hsl(var(--lines))_0,hsl(var(--lines))_1px,transparent_0,transparent_50%)] bg-size-[16px_16px] [--offset-x:16px] [--offset-y:-16px]" />
           <Header />
           <main> {children}</main>
           <Footer />
