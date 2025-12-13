@@ -29,7 +29,11 @@ export const ProjectHeader = ({ projectCategories, tech }: TProjectHeader) => (
   </div>
 );
 
-export const ProjectSection = ({ title, children }: TProjectSection) => {
+export const ProjectSection = ({
+  title,
+  children,
+  childrenClassName,
+}: { childrenClassName?: string } & TProjectSection) => {
   return (
     <MotionContainer
       key={title}
@@ -44,8 +48,8 @@ export const ProjectSection = ({ title, children }: TProjectSection) => {
         gradientVariants({ axis: "xy" }),
       )}
     >
-      <h3 className="bg-background w-fit border-r px-4 py-2">{title}</h3>
-      <div className={cn("bg-background border-t px-2 pt-4 pb-2")}>
+      <h3 className="bg-card w-fit border-r px-4 py-2">{title}</h3>
+      <div className={cn("bg-card border-t px-2 pt-4 pb-2", childrenClassName)}>
         {children}
       </div>
     </MotionContainer>

@@ -15,7 +15,7 @@ export const gradientVariants = cva(
 
         bars: "bg-[linear-gradient(135deg,#0000_18.75%,hsl(var(--background))_0_31.25%,#0000_0),repeating-linear-gradient(45deg,hsl(var(--background))_-6.25%_6.25%,hsl(var(--lines))_0_18.75%)]",
         diamond:
-          "bg-[repeating-conic-gradient(from_45deg,hsl(var(--background))_0%_25%,hsl(var(--lines))_0%_50%)]",
+          "bg-[repeating-conic-gradient(from_45deg,hsl(var(--background))_0%_25%,hsla(var(--lines),0.7)_0%_50%)]",
       },
     },
   },

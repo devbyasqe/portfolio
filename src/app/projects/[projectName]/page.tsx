@@ -125,7 +125,7 @@ const ProjectPage = async ({ params }: TProjectParams) => {
           </ProjectSection>
 
           {project.features && (
-            <ProjectSection title="Why It's Useful">
+            <ProjectSection title="Why It's Useful" childrenClassName="bg-transparent">
               <div className="grid gap-3 md:grid-cols-2">
                 {project.features.map((feature, index) => (
                   <div

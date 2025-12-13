@@ -22,3 +22,13 @@ export const slideInVariant: Variants = {
   hidden: { y: 50, opacity: 0, filter: "blur(10px)" },
   visible: { y: 0, opacity: 1, filter: "blur(0px)" },
 };
+
+export const slideInXVariant: Variants = {
+  hidden: { x: 100, opacity: 0, filter: "blur(10px)" },
+  visible: { x: 0, opacity: 1, filter: "blur(0px)" },
+};
+
+export const slideInYVariant: Variants = {
+  hidden: { y: -50, opacity: 0, filter: "blur(10px)" },
+  visible: { y: 0, opacity: 1, filter: "blur(0px)" },
+};
