@@ -59,7 +59,7 @@ export const buttonVariants = cva(
 
 export const iconWrapperVariants = cva(
   [
-    "relative inline-flex size-8 items-center justify-center rounded-full",
+    "relative inline-flex shrink-0 size-8 items-center justify-center rounded-full",
     "transition-all duration-500",
     "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   ],

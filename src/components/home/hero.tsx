@@ -88,7 +88,7 @@ const HomeHero = () => {
               >
                 <ButtonSlide variant={"accent"} />
                 <IconWrapper variant={null} hover={"left"}>
-                  <GmailIcon />
+                  <GithubIcon />
                 </IconWrapper>
                 <IconWrapper hover={"right"} variant={"accent"}>
                   <GithubIcon />

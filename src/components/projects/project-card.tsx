@@ -49,6 +49,7 @@ const ProjectCard = ({ id, thumbnail, summary, name }: TProjectCard) => {
           {thumbnail.video && (
             <video
               src={thumbnail.video}
+              poster={thumbnail.poster}
               preload="none"
               autoPlay
               muted

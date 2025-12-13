@@ -6,7 +6,7 @@ import {
   iconEffectVariants,
   iconWrapperVariants,
 } from "@/components/variants/css/button";
-import { ElementType } from "react";
+import { ElementType, ReactNode } from "react";
 import { MotionProps } from "motion/react";
 
 export type TCustomLink = React.AnchorHTMLAttributes<HTMLAnchorElement> &
@@ -40,6 +40,7 @@ type RepositoryLabel = "Source Code" | "Frontend" | "Backend";
 type Media = {
   img?: string;
   video?: string;
+  poster?: string;
 };
 
 export type TProject = {
@@ -78,6 +79,8 @@ export type TProjectsParams = {
   searchParams: Promise<{ tech: ProjectTag }>;
 };
 
+export type TProjectParams = { params: Promise<{ projectName: string }> };
+
 export type TMotionContainer = {
   as?: ElementType;
   children?: React.ReactNode;
@@ -87,7 +90,12 @@ export type TMotionContainer = {
 export type TProjectHeader = {
   tech: ProjectTag | "All";
   projectCategories: {
-    name: string;
+    label: string;
     total: number;
   }[];
+};
+
+export type TProjectSection = {
+  title: string;
+  children: ReactNode;
 };

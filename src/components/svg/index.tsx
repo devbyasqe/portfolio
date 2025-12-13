@@ -14,20 +14,30 @@ export const PhoneIcon = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const PlusIcon = (props: SVGProps<SVGSVGElement>) => (
+export const PlayIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width="17"
-    height="17"
-    viewBox="0 0 17 17"
-    fill="none"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <path d="M8 8H0V9H8V8Z" fill="hsl(var(--secondary))" />
-    <path d="M17 8H9V9H17V8Z" fill="hsl(var(--muted))" />
-    <path d="M9 0H8V8H9V0Z" fill="hsl(var(--secondary))" />
-    <path d="M9 9H8V17H9V9Z" fill="hsl(var(--muted))" />
-    <path d="M9 8H8V9H9V8Z" fill="hsl(var(--accent))" />
+    <path d="M20.9814 10.1983C22.3395 11.0144 22.3395 12.9856 20.9814 13.8017L6.17738 22.6973C4.77903 23.5376 3 22.5288 3 20.8957V3.10434C3 1.47117 4.77902 0.462406 6.17738 1.30267L20.9814 10.1983Z" />
+  </svg>
+);
+
+export const PauseIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <rect x="6" y="1" width="4" height="22" rx="2" />
+    <rect x="14" y="1" width="4" height="22" rx="2" />
   </svg>
 );
 

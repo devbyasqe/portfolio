@@ -63,9 +63,11 @@ const nexusSeaCarriers: TProject = {
   ],
   preview: {
     video: "/projects/nexusseacarriers/preview.webm",
+    poster: "/projects/nexusseacarriers/poster.webp",
   },
   thumbnail: {
     video: "/projects/nexusseacarriers/thumbnail.webm",
+    poster: "/projects/nexusseacarriers/poster.webp",
   },
 };
 
@@ -99,9 +101,11 @@ const weeb: TProject = {
   liveDemo: "https://asqe-weeb.vercel.app/",
   preview: {
     video: "/projects/weeb/preview.webm",
+    poster: "/projects/weeb/poster.webp",
   },
   thumbnail: {
     video: "/projects/weeb/thumbnail.webm",
+    poster: "/projects/weeb/poster.webp",
   },
 };
 

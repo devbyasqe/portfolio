@@ -1,7 +1,7 @@
 import { myProjects } from "@/components/data/projects";
 import { ProjectHeader } from "@/components/projects";
 import ProjectCard from "@/components/projects/project-card";
-import { Container } from "@/components/ui";
+import { Container, PageTitle } from "@/components/ui";
 import { MotionContainer } from "@/components/ui/client";
 import { gradientVariants } from "@/components/variants/css";
 import { slideInVariant } from "@/components/variants/motion";
@@ -19,13 +19,13 @@ const ProjectsPage = async ({ searchParams }: TProjectsParams) => {
 
   const tagsWithCounts = [
     {
-      name: "All",
+      label: "All",
       total: myProjects.length,
     },
     ...Array.from(new Set(myProjects.flatMap((project) => project.tags)))
       .sort()
       .map((tag) => ({
-        name: tag,
+        label: tag,
         total: myProjects.filter((project) => project.tags.includes(tag))
           .length,
       })),
@@ -35,29 +35,13 @@ const ProjectsPage = async ({ searchParams }: TProjectsParams) => {
     <>
       <div
         className={cn(
-          "animate-line-move pointer-events-none fixed inset-0 -z-10 [--offset-x:16px] [--offset-y:16px]",
           gradientVariants({ axis: "xy" }),
+          "animate-line-move pointer-events-none fixed inset-0 -z-10 [--offset-x:16px] [--offset-y:16px]",
         )}
       />
       <section>
-        <Container className="">
-          <div
-            className={cn(
-              "animate-line-move pointer-events-none overflow-clip py-10 text-center [--offset-y:16px]",
-              gradientVariants({ axis: "square" }),
-            )}
-          >
-            <MotionContainer
-              as={"h1"}
-              variants={slideInVariant}
-              initial={"hidden"}
-              animate={"visible"}
-              transition={{ duration: 0.3, ease: "linear" }}
-            >
-              Projects
-            </MotionContainer>
-          </div>
-
+        <PageTitle title="Projects" />
+        <Container >
           <ProjectHeader tech={tech} projectCategories={tagsWithCounts} />
         </Container>
       </section>
