@@ -1,12 +1,19 @@
-import { TProjectHeader, TProjectSection } from "@/lib/types";
+import { TProjectHeader } from "@/lib/types";
 import { CustomLink } from "../ui/buttons";
 import { cn } from "@/lib/utils";
 import { gradientVariants } from "../variants/css";
 import { MotionContainer } from "../ui/client";
 import { slideInVariant } from "../variants/motion";
+import { ReactNode } from "react";
 
 export const ProjectHeader = ({ projectCategories, tech }: TProjectHeader) => (
-  <div className="bg-background mx-auto flex w-fit flex-wrap justify-center gap-2 border-r border-l p-4 max-sm:max-w-xs">
+  <MotionContainer
+    variants={slideInVariant}
+    initial={"hidden"}
+    animate={"visible"}
+    transition={{ duration: 0.3, delay: 0.5, ease: "linear" }}
+    className="bg-background mx-auto flex w-fit flex-wrap justify-center gap-2 border-r border-l p-4 max-sm:max-w-xs"
+  >
     {projectCategories.map(({ label, total }, index) => (
       <CustomLink
         key={label + index}
@@ -26,14 +33,18 @@ export const ProjectHeader = ({ projectCategories, tech }: TProjectHeader) => (
         </div>
       </CustomLink>
     ))}
-  </div>
+  </MotionContainer>
 );
 
 export const ProjectSection = ({
   title,
   children,
   childrenClassName,
-}: { childrenClassName?: string } & TProjectSection) => {
+}: {
+  childrenClassName?: string;
+  title: string;
+  children: ReactNode;
+}) => {
   return (
     <MotionContainer
       key={title}

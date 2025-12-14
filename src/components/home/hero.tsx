@@ -11,14 +11,27 @@ import {
 } from "../ui/buttons";
 import { GithubIcon, GmailIcon, LinkedInIcon } from "../svg";
 import { ResumeButton } from ".";
+import { MotionContainer } from "../ui/client";
+import {
+  flipVariant,
+  slideInVariant,
+  slideInXVariant,
+  slideInYVariant,
+} from "../variants/motion";
 
 const HomeHero = () => {
   return (
     <section>
       <Container>
         <div className="grid sm:grid-cols-12">
-          <div className="group/image bg-background px-4 py-6 transition-all duration-500 sm:col-span-5 sm:border-r md:col-span-4">
-            <div className="ring-muted ring-offset-background via-muted animate-shimmer relative aspect-square overflow-hidden rounded-full bg-linear-to-r from-transparent to-transparent bg-size-[200%_100%] ring-2 ring-offset-2 max-sm:h-44">
+          <div className="group/image bg-background overflow-clip px-4 py-6 transition-all duration-500 sm:col-span-5 sm:border-r md:col-span-4">
+            <MotionContainer
+              variants={flipVariant}
+              initial={"hidden"}
+              animate={"visible"}
+              transition={{ duration: 0.3, ease: "linear" }}
+              className="ring-muted ring-offset-background via-muted animate-shimmer relative aspect-square overflow-hidden rounded-full bg-linear-to-r from-transparent to-transparent bg-size-[200%_100%] ring-2 ring-offset-2 max-sm:h-44"
+            >
               <Image
                 loading="eager"
                 src={userProfile["primaryImage"]}
@@ -45,27 +58,64 @@ const HomeHero = () => {
                   "group-active/image:rotate-0 group-active/image:opacity-100 group-active/image:blur-none",
                 )}
               />
-            </div>
+            </MotionContainer>
           </div>
           <div className="flex flex-col justify-end transition-all duration-500 sm:col-span-7 md:col-span-8">
-            <div className="bg-background p-4 sm:border-t">
-              <h1>ASHIQUE</h1>
-              <p className="text-foreground-muted mt-1 text-sm tracking-tight">
+            <div className="bg-background overflow-clip p-4 sm:border-t">
+              <MotionContainer
+                as={"h1"}
+                variants={slideInYVariant}
+                initial={"hidden"}
+                animate={"visible"}
+                transition={{ duration: 0.3, delay: 0.3, ease: "linear" }}
+              >
+                ASHIQUE
+              </MotionContainer>
+              <MotionContainer
+                as={"p"}
+                variants={slideInXVariant}
+                initial={"hidden"}
+                animate={"visible"}
+                transition={{ duration: 0.75, delay: 0.6, ease: "linear" }}
+                className="text-foreground-muted mt-1 text-sm tracking-tight"
+              >
                 [aa-shi-k]
-              </p>
-              <h2 className="mt-4">A Full-Stack Developer</h2>
+              </MotionContainer>
+              <MotionContainer
+                as={"h2"}
+                variants={slideInVariant}
+                initial={"hidden"}
+                animate={"visible"}
+                transition={{ duration: 0.75, delay: 0.8, ease: "linear" }}
+                className="mt-4"
+              >
+                A Full-Stack Developer
+              </MotionContainer>
             </div>
           </div>
         </div>
 
         <div className="border-t">
-          <div className="bg-background mx-auto w-[90%] max-w-2xl border-r border-l">
-            <h3 className="p-4 text-pretty">
+          <div className="bg-background mx-auto w-[90%] max-w-2xl overflow-clip border-r border-l">
+            <MotionContainer
+              as={"h3"}
+              variants={slideInVariant}
+              initial={"hidden"}
+              animate={"visible"}
+              transition={{ duration: 0.3, delay: 1, ease: "linear" }}
+              className="p-4 text-pretty"
+            >
               I develop full-stack applications using Django and Next.js. I care
               about clean code, thoughtful interfaces, and building things that
               actually work.
-            </h3>
-            <div className="flex flex-wrap justify-center gap-3 border-t px-4 py-2 sm:items-center">
+            </MotionContainer>
+            <MotionContainer
+              variants={slideInVariant}
+              initial={"hidden"}
+              animate={"visible"}
+              transition={{ duration: 0.3, delay: 1.5, ease: "linear" }}
+              className="flex flex-wrap justify-center gap-3 border-t px-4 py-2 sm:items-center"
+            >
               <CustomLink
                 href={`mailto:${userProfile["email"]}`}
                 padding={"icon-movable"}
@@ -109,7 +159,7 @@ const HomeHero = () => {
                 </IconWrapper>
               </CustomLink>
               <ResumeButton />
-            </div>
+            </MotionContainer>
           </div>
         </div>
       </Container>

@@ -31,15 +31,15 @@ const ToolsPage = () => {
                 whileInView={"visible"}
                 viewport={{ amount: 0.2, once: true }}
                 transition={{ duration: 0.3, ease: "linear" }}
-                className="bg-card w-fit rounded-t-[1.75rem] border border-b-0 px-4 pt-3 pb-2 mx-auto"
+                className="bg-card mx-auto w-fit rounded-t-[1.75rem] border border-b-0 px-4 pt-3 pb-2"
               >
                 {title}
               </MotionContainer>
               <div
                 className={cn(
-                  "grid overflow-clip rounded-3xl  border md:grid-cols-2",
+                  "grid overflow-clip rounded-3xl border md:grid-cols-2",
                   gradientVariants({ axis: "y" }),
-                  "animate-line-move   [--offset-y:16px]",
+                  "animate-line-move [--offset-y:16px]",
                 )}
               >
                 {developmentlist.map(

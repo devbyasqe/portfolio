@@ -29,3 +29,9 @@ export const navLinks = [
   { label: "Tools", href: "/tools", icon: <ToolsIcon /> },
   { label: "About", href: "/about", icon: <PersonIcon /> },
 ];
+
+export const interests = [
+  "Daydreaming about traveling the world (or at least pretending to).",
+  "Experimenting in the kitchen (sometimes with edible results).",
+  "Watching cartoons, because life is too short to be serious all the time.",
+];

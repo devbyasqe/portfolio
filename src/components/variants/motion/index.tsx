@@ -32,3 +32,14 @@ export const slideInYVariant: Variants = {
   hidden: { y: -50, opacity: 0, filter: "blur(10px)" },
   visible: { y: 0, opacity: 1, filter: "blur(0px)" },
 };
+
+export const flipVariant: Variants = {
+  hidden: {
+    y: -100,
+    x: 100,
+    opacity: 0,
+    filter: "blur(20px)",
+    scaleX: -1,
+  },
+  visible: { y: 0, x: 0, opacity: 1, filter: "blur(0px)", scaleX: 1 },
+};

@@ -10,7 +10,7 @@ const HomePage = () => {
       <div
         className={cn(
           gradientVariants({ axis: "bars" }),
-          "animate-line-move pointer-events-none fixed inset-0 -z-10 [--offset-x:16px] [--offset-y:16px]",
+          "animate-line-move pointer-events-none fixed inset-0 -z-10 bg-size-[24px_24px] [--offset-x:24px] [--offset-y:24px]",
         )}
       />
       <HomeHero />

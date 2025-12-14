@@ -41,7 +41,7 @@ const ProjectsPage = async ({ searchParams }: TProjectsParams) => {
       />
       <section>
         <PageTitle title="Projects" />
-        <Container >
+        <Container className="overflow-clip" >
           <ProjectHeader tech={tech} projectCategories={tagsWithCounts} />
         </Container>
       </section>

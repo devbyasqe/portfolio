@@ -6,7 +6,7 @@ import {
   iconEffectVariants,
   iconWrapperVariants,
 } from "@/components/variants/css/button";
-import { ElementType, ReactNode } from "react";
+import { ElementType } from "react";
 import { MotionProps } from "motion/react";
 
 export type TCustomLink = React.AnchorHTMLAttributes<HTMLAnchorElement> &
@@ -93,9 +93,4 @@ export type TProjectHeader = {
     label: string;
     total: number;
   }[];
-};
-
-export type TProjectSection = {
-  title: string;
-  children: ReactNode;
 };
